@@ -4,34 +4,33 @@ class Employee extends Person{
         this.clients = clients;
     }
     bestClient(){
-
-        // Stampa la lista del miglior cliente
-        // return 'Paolino Paperino';
-        // return client.toString();
+        const clients = this.clients;
+        let bestClient = clients[0];
+        for (let i = 1; i < clients.length; i++) {
+            const actualClient = clients[i];
+            const bestTotal = bestClient.totalOrdersPrice();
+            const actualTotal = actualClient.totalOrdersPrice();
+            if (actualTotal > bestTotal) {
+                bestClient = actualClient;
+            }
+        }
+        return bestClient;
     }
-    toString() {
+    toString(){
         return super.toString()+`Client(s): ${(this.clients).length}\nTotal Earned: ${this.totalEarnings()}€\nBest Client: ${this.bestClient()}`;
     }
-    totalEarnings(){
-        return '0';
-    }/*
-    addClient(){
-                // fare una push sull'array ordini
-        return 'cliente aggiunto';
+    totalEarnings(orders){
+        let totalEarn = 0;
+        for (let i = 0; i < (this.clients).length; i++) {
+            const element = (this.clients)[i];
+            totalEarn += element.totalOrdersPrice();
+        }
+        return totalEarn;
     }
-    removeClient(){
-                // fare una pop sull'array ordini
-        return 'cliente rimosso';
-    }*/
+    addClient(newClient){
+        this.clients.push(newClient);
+    }
+    removeClient(delClient){
+        this.clients.pop(delClient);
+    }
 }
-
-/*
-Funzioni classe Order: 
-totalPrice()
-toString()
-Funzioni classe Client: 
-sumOfOrders()
-toString()
-totalOrdersPrice()
-addOrder()
-*/

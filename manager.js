@@ -7,30 +7,29 @@ class Manager extends Person{
         return super.toString()+`Employees: ${(this.employees).length}\nClients: ${this.totalClients()}\nTotal Earnings: ${this.totalEarnings()}€`;
     }
     totalClients(){
-        return '0';
+        let employeeList = this.employees;
+        let totClients = 0;
+        for (let i = 0; i < employeeList.length; i++) {
+            let actualEmployee = employeeList[i];
+            let partialClients = (actualEmployee.clients).length;
+            totClients = partialClients + totClients;
+        }
+        return totClients;
     }
     totalEarnings(){
-        return '0';
+        let employeeList = this.employees;
+        let totEarned = 0;
+        for (let i = 0; i < employeeList.length; i++) {
+            let actualEmployee = employeeList[i];
+            let partialEarned = actualEmployee.totalEarnings();
+            totEarned = partialEarned + totEarned;
+        }
+        return totEarned;
     }
-    /*
-    addEmployee(){
-        return 'Impiegato aggiunto';
+    hire(newEmployee){
+        this.employees.push(newEmployee);
     }
-    emploYeet(){
-        return 'Impiegato rimosso';
-    }*/
+    emploYEET(Employee){
+        this.employees.pop(Employee);
+    }
 }
-/*
-Funzioni classe Order: 
-totalPrice()
-toString()
-Funzioni classe Client: 
-sumOfOrders()
-toString()
-totalOrdersPrice()
-addOrder()
-Funzioni classe Employee: 
-bestClient()
-toString()
-totalEarnings
-*/

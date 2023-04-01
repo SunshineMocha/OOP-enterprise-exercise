@@ -4,6 +4,12 @@ class Client extends Person{
         this.address = address;
         this.orders = orders;
     }
+    addOrder(newOrder){
+        this.orders.push(newOrder);
+    }
+    delOrder(delOrder){
+        this.orders.pop(delOrder);
+    }
     sumOfOrders() {
         const totOrders = (this.orders).length
         return totOrders;
@@ -18,8 +24,5 @@ class Client extends Person{
             totalPrice += element.totalPrice();
         }
         return totalPrice;
-    }
-    addOrder(){
-        // fare una push sull'array ordini
     }
 }
