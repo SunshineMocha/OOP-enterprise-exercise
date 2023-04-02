@@ -1,6 +1,9 @@
 class Client extends Person{
-    constructor(name, surname, address, orders){
-        super(name, surname);
+    constructor(name, surname, doBYear, doBMonth, doBDay, address, orders){
+        super(name, surname, doBYear, doBMonth, doBDay);
+        this.doBYear = doBYear;
+        this.doBMonth = doBMonth;
+        this.doBDay = doBDay;
         this.address = address;
         this.orders = orders;
     }
@@ -15,8 +18,13 @@ class Client extends Person{
         return totOrders;
     }
     toString() {
-        return super.toString()+`Address: ${this.address}\nOrder(s): ${this.sumOfOrders()}\nTotal Spent: ${this.totalOrdersPrice()}€\nOrder(s) List:\n${this.orders}\n`;
-    }
+        if (this.isBirthday()=== true) {
+            return super.toString()+`Address: ${this.address}\nOrder(s): ${this.sumOfOrders()}\nTotal Spent: ${this.totalOrdersPrice()}€\nOrder(s) List:\n${this.orders}\nNOTE: Today's their birthday!`;
+        } 
+        else {
+            return super.toString()+`Address: ${this.address}\nOrder(s): ${this.sumOfOrders()}\nTotal Spent: ${this.totalOrdersPrice()}€\nOrder(s) List:\n${this.orders}\n`;
+        }
+}
     totalOrdersPrice(){
         let totalPrice = 0;
         for (let i = 0; i < (this.orders).length; i++) {

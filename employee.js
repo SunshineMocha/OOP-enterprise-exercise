@@ -1,6 +1,9 @@
 class Employee extends Person{
-    constructor(name, surname, clients) {
-        super(name, surname);
+    constructor(name, surname, doBYear, doBMonth, doBDay, clients) {
+        super(name, surname, doBYear, doBMonth, doBDay);
+        this.doBYear = doBYear;
+        this.doBMonth = doBMonth;
+        this.doBDay = doBDay;
         this.clients = clients;
     }
     bestClient(){
