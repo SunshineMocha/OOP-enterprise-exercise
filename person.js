@@ -12,10 +12,8 @@ class Person{
     getAge(){
         let age = 0;
         let todayYear = new Date().getFullYear();
-        //let todayMonth = new Date().getMonth();
-        // let todayDay = new Date().getDate();
-        let todayMonth = 8;
-        let todayDay = 5;
+        let todayMonth = new Date().getMonth();
+        let todayDay = new Date().getDate();
         if (todayMonth <= this.doBMonth) {
             if (todayDay < this.doBDay) {
                 return age = todayYear - this.doBYear - 1;
