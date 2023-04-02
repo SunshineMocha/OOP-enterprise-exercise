@@ -24,12 +24,4 @@ employee03 = new Employee("Vlad","Vladi",1988, 0, 1,[client00]);
 manager00 = new Manager("Chiara", "Badile",1993, 8, 5,[employee02, employee00]);
 manager01 = new Manager("Andrea", "Asioli",1989, 0, 1,[employee01, employee03]);
 // Stampe test
-console.log();
-// Da finire: Classe Person, funzioni getAge, isBirthday
-//let doT = new Date(2022, 11, 31).getFullYear();
-
-/*let age;
-let testdoB = new Date(1993, 08, 05).toString(); console.log(testdoB);
-let today = new Date(2013,08,05).toString(); console.log(today);
-age = today - testdoB; console.log(age);
-*/
+console.log('Run your tests here in the console:');

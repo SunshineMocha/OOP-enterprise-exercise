@@ -9,6 +9,6 @@ class Order{
         return total;
     }
     toString(){
-        return `\nProduct: ${this.product} \nQuantity: ${this.quantity}\nUnit Cost: ${this.unitPrice}€\nTotal: ${this.totalPrice()}€\n`;
+        return `----------\nProduct: ${this.product} \nQuantity: ${this.quantity}\nUnit Cost: ${this.unitPrice}€\nTotal: ${this.totalPrice()}€\n`;
     }
 }
