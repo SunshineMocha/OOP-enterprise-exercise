@@ -16,7 +16,7 @@ class Client extends Person{
     }
     toString() {
         if (this.isBirthday()=== true) {
-            return super.toString()+`Address: ${this.address}\nOrder(s): ${this.sumOfOrders()}\nTotal Spent: ${this.totalOrdersPrice().toFixed(2)}€\nOrder(s) List:\n${this.orders}\nNOTE: Today's their birthday!`;
+            return super.toString()+`Address: ${this.address}\nOrder(s): ${this.sumOfOrders()}\nTotal Spent: ${this.totalOrdersPrice().toFixed(2)}€\nOrder(s) List:\n${this.orders.join("")}\nNOTE: Today's their birthday!`;
         } 
         else {
             return super.toString()+`Address: ${this.address}\nOrder(s): ${this.sumOfOrders()}\nTotal Spent: ${this.totalOrdersPrice().toFixed(2)}€\nOrder(s) List:\n${this.orders.join("")}\n`;
@@ -33,7 +33,7 @@ class Client extends Person{
 }
 
 /*
-Orders List with for
+toString with "for" for Orders List 
     for(i = 0; i < this.orders.length; i++){
         let orders = this.orders[i];
         description+='----------\n'
