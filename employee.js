@@ -31,6 +31,12 @@ class Employee extends Person{
         this.clients.push(newClient);
     }
     removeClient(delClient){
-        this.clients.pop(delClient);
+        // this.clients.pop(delClient); ver 1.0
+        let clients = this.clients; // ver 2.0, removes the client ONLY if it's already present
+        for (let i = 0; i < clients.length; i++){
+            if (delClient === clients[i]) {
+                clients.splice(i, 1);
+            }
+        }
     }
 }
