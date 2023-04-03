@@ -1,5 +1,5 @@
 class Employee extends Person{
-    constructor(name, surname, doBYear, doBMonth, doBDay, clients) {
+    constructor(name, surname, doBYear, doBMonth, doBDay, clients=[]) {
         super(name, surname, doBYear, doBMonth, doBDay);
         this.clients = clients;
     }

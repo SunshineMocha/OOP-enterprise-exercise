@@ -10,16 +10,12 @@ class Client extends Person{
     delOrder(delOrder){
         this.orders.pop(delOrder);
     }
-    sumOfOrders() {
-        const totOrders = (this.orders).length
-        return totOrders;
-    }
     toString() {
         if (this.isBirthday()=== true) {
-            return super.toString()+`Address: ${this.address}\nOrder(s): ${this.sumOfOrders()}\nTotal Spent: ${this.totalOrdersPrice().toFixed(2)}€\nOrder(s) List:\n${this.orders.join("")}\nNOTE: Today's their birthday!`;
+            return super.toString()+`Address: ${this.address}\nOrder(s): ${(this.orders).length}\nTotal Spent: ${this.totalOrdersPrice().toFixed(2)}€\nOrder(s) List:\n${this.orders.join("")}\nNOTE: Today's their birthday!`;
         } 
         else {
-            return super.toString()+`Address: ${this.address}\nOrder(s): ${this.sumOfOrders()}\nTotal Spent: ${this.totalOrdersPrice().toFixed(2)}€\nOrder(s) List:\n${this.orders.join("")}\n`;
+            return super.toString()+`Address: ${this.address}\nOrder(s): ${(this.orders).length}\nTotal Spent: ${this.totalOrdersPrice().toFixed(2)}€\nOrder(s) List:\n${this.orders.join("")}\n`;
         }
 }
     totalOrdersPrice(){
