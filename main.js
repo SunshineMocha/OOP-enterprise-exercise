@@ -25,3 +25,34 @@ manager00 = new Manager("Chiara", "Badile",1993, 8, 5,[employee02, employee00]);
 manager01 = new Manager("Andrea", "Asioli",1989, 0, 1,[employee01, employee03]);
 // Stampe test
 console.log('Run your tests here in the console:');
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// ESEMPI DI UTILIZZO DELLA NOSTRA CLASSE E FUNZIONI STATICHE
+/* 
+
+console.log(Math.sqrt(16)) // uso della math come esempio dei metodi statici. Math è una classe. 
+console.log(client01.totalOrdersPrice()); // perche non faccio new match etc etc? perchè math è una classe statica
+
+const numbers = [3,4,5,9];
+function isEven(element){
+    return element % 2 === 0;
+}
+console.log(Utility.filter(numbers, (element) => element > 4)); // Utilizzo della nostra funzione statica nella class Utility. Esattamente come funziona Math.
+console.log(Utility.filter(numbers, isEven));
+
+function multiplyBy3(element){
+    return element *3;
+}
+console.log(Utility.map(numbers, (element) => element * 3));
+console.log(Utility.map(numbers, multiplyBy3)); 
+
+function sum(number1, number2){
+    return number1 + number2;
+}
+
+console.log(Utility.reduce(numbers, (accumulator, current) => accumulator + current, 0 ));
+console.log(Utility.reduce(numbers, sum, 0)); 
+
+*/
