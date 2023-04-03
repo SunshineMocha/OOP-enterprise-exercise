@@ -19,7 +19,7 @@ class Client extends Person{
             return super.toString()+`Address: ${this.address}\nOrder(s): ${this.sumOfOrders()}\nTotal Spent: ${this.totalOrdersPrice()}€\nOrder(s) List:\n${this.orders}\nNOTE: Today's their birthday!`;
         } 
         else {
-            return super.toString()+`Address: ${this.address}\nOrder(s): ${this.sumOfOrders()}\nTotal Spent: ${this.totalOrdersPrice()}€\nOrder(s) List:\n${this.orders}\n`;
+            return super.toString()+`Address: ${this.address}\nOrder(s): ${this.sumOfOrders()}\nTotal Spent: ${this.totalOrdersPrice()}€\nOrder(s) List:\n${this.orders.join("")}\n`;
         }
 }
     totalOrdersPrice(){
