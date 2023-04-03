@@ -1,9 +1,6 @@
 class Client extends Person{
     constructor(name, surname, doBYear, doBMonth, doBDay, address, orders){
         super(name, surname, doBYear, doBMonth, doBDay);
-        this.doBYear = doBYear;
-        this.doBMonth = doBMonth;
-        this.doBDay = doBDay;
         this.address = address;
         this.orders = orders;
     }

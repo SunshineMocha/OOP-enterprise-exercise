@@ -1,9 +1,6 @@
 class Manager extends Person{
     constructor(name, surname, doBYear, doBMonth, doBDay, employees = []) {
         super(name, surname, doBYear, doBMonth, doBDay);
-        this.doBYear = doBYear;
-        this.doBMonth = doBMonth;
-        this.doBDay = doBDay;
         this.employees = employees;
     }
     toString() {
