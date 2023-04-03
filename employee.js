@@ -22,10 +22,10 @@ class Employee extends Person{
     totalEarnings(orders){
         let totalEarn = 0;
         for (let i = 0; i < (this.clients).length; i++) {
-            const element = (this.clients)[i];
-            totalEarn += element.totalOrdersPrice();
+            const client = (this.clients)[i];
+            totalEarn += client.totalOrdersPrice();
         }
-        return totalEarn;
+        return totalEarn.toFixed(2);
     }
     addClient(newClient){
         this.clients.push(newClient);
