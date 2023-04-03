@@ -24,6 +24,7 @@ Cosa sa fare:
 
 - sa calcolare il suo bestClient()
 - sa fare il suo toString che ritorna i dati di Employee, il numero dei clienti e quale è il suo miglior cliente
+
 Client(cliente):
 
 - Name (nome)
@@ -36,6 +37,7 @@ Cosa sa fare:
 - sa calcolare la somma dei suoi ordini 
     get sumOfOrder()
 - sa fare il suo toString() che, oltre a restituire i suoi dati mi lista tutti gli ordini passati
+
 Order (Ordine)
 
 - Product (Nome Prodotto)
